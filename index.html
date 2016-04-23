@@ -6,7 +6,6 @@
 </head>
 <body>
 	<input type="text" id="selectData">
-	<script src="./jquery-1.9.1.min.js"></script>
 	<script src="./selectData.js"></script>
 	<script>
 		var arr = new Array();
@@ -14,12 +13,12 @@
 		arr[1] = ['850542.SL','钨','指数'];
 		arr[2] = ['0777.HK','网龙','港股'];
 		arr[3] = ['WB.O','微博','美股'];
-		$("#selectData").on("keyup", function() {
-			var val = $(this).val();
-			var res = autoSelect.query(val,arr);
-			$('body').append(res + '\n');
-			console.log(res);
-		})
+
+		var oIpt = document.getElementById('selectData');
+		oIpt.onkeyup = function() {
+			console.log(autoSelect.query(oIpt.value,arr));
+		}
+
 	</script>
 </body>
 </html>

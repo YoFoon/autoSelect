@@ -72,7 +72,6 @@ var autoSelect =  {
 	query: function(str,data) {
 
 		if(str == ""){
-			$("#YoFoon").empty();
 			return [];
 		}
 		// debugger;
