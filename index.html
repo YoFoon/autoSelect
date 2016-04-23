@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="selectData">
+		<input type="text">
+	</div>
+	<script src="./jquery-1.9.1.min.js"></script>
+	<script src="./selectData.js"></script>
+	<script>
+		var arr = new Array();
+		arr[0] = ['W.N','Wayfair','美股'];
+		arr[1] = ['850542.SL','钨','指数'];
+		arr[2] = ['0777.HK','网龙','港股'];
+		arr[3] = ['WB.O','微博','美股'];
+		$("#selectData").selectData({
+			data:arr,
+			pos:'top', //其他 bottom 默认 top
+			top: '30px',
+			left: '0px',
+			height: '100px',
+			width: '200px'
+		});
+	</script>
+</body>
+</html>
